@@ -29,11 +29,11 @@ async def on_ready():  # Assim que o bot liga corre isto
     print("Sou um bot que se tornou ativo. Sentience here I go!")
     global guild
     guild = client.get_guild(847523022574845953)  # Id do server
-    voiceChannel = discord.utils.get(guild.voice_channels, name='your-wish-is-your-command')
-    await voiceChannel.connect()
-    downloadVideos("https://youtube.com/playlist?list=PL80GxExWEfBVqOM572QB-ge-oueS_S7UV")
-    while True:
-        await play()
+    #voiceChannel = discord.utils.get(guild.voice_channels, name='your-wish-is-your-command')
+    #await voiceChannel.connect()
+    #downloadVideos("https://youtube.com/playlist?list=PL80GxExWEfBVqOM572QB-ge-oueS_S7UV")
+    #while True:
+    #    await play()
 
 
 @client.event
@@ -58,7 +58,7 @@ async def giveRankCMD(message):
         out = "O role não foi encontrado. Verifique se o escreveu direito."
     await message.channel.send(out)
 
-
+"""
 async def play():
     voice = discord.utils.get(client.voice_clients, guild=guild)
 
@@ -66,7 +66,7 @@ async def play():
         if file.endswith(".mp3"):
             voice.play(discord.FFmpegPCMAudio(file))
             time.sleep(MP3(file).info.length + 0.5)
-
+"""
 
 def downloadVideos(url):
     ydl_opts = {
@@ -82,4 +82,4 @@ def downloadVideos(url):
 
 
 if __name__ == '__main__':
-    client.run("ODQ5OTIwNDAzOTI0ODQ0NTY1.YLiMDw.dC2vXViWJbvmSFdhdX2brzdDnvM")
+    client.run("ODQ5OTIwNDAzOTI0ODQ0NTY1.YLiMDw.AtG-O7oIc4Zxxdjj0WHB_qBCs64")
